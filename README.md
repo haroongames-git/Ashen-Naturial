@@ -10,7 +10,7 @@ You can clone the repository to your own machine for testing and development pur
 
 1. In your terminal (command prompt), run:
 ```bat
-git clone https://github.com/haroongames-it/Ashen-Naturial.git
+git clone https://github.com/haroongames-git/Ashen-Naturial.git
 ```
 2. Then, create a file named `.env.js` and put this code in it:
 ```js
