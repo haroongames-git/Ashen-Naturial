@@ -1,0 +1,16 @@
+const Discord = require('discord.js')
+
+module.exports = {
+	name: 'Command Name',
+  aliases: ['Command', 'Aliases', 'Go', 'Here'],
+	description: "Command Description",
+	args: false,
+  moderatoronly: false,
+  guildonly: false,
+  dmonly: false,
+  usage: "Command Usage",
+  owneronly: false,
+	execute(message, args, prefix) {
+		const client = message.client;
+	},
+};
