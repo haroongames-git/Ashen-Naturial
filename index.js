@@ -44,14 +44,17 @@ client.on('ModMail Channel Sent', message => {
 
 })
 
+async function UpdatePresence() {
+  return await client.user.setActivity(`with ${client.guilds.cache.length} servers`, {type: 'PLAYING'})
+}
+
 client.on('ready', async () => {
   console.log(`Logged in as ${client.user.tag}!`)
   require('./website.js')(client)
-  client.user.setActivity(`with ${client.guilds.cache.map(x => x).length} servers | BETA Version`, {type: 'PLAYING'})
-  client.user.setUsername("Ashen Naturial")
 })
 
 client.on('guildCreate', async (guild) => {
+  await UpdatePresence()
   const channel = await client.channels.fetch('751480032978927627')
 
   const embed = new Discord.MessageEmbed(client.Embeds.TemplateEmbed)
